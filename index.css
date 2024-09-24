@@ -1,0 +1,75 @@
+body {
+    background-color: #b6e4e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(https://images.pexels.com/photos/4709285/pexels-photo-4709285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:center;
+    
+   
+}
+
+.container {
+    text-align: center;
+
+}
+
+h1 {
+    color: #ffffff;
+    margin-bottom: 30px;
+
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    
+}
+
+.card {
+    background-color: #70b4b3;
+    border-radius: 30px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 14px 6px rgba(70, 139, 140, 0.1);
+    opacity: .5;
+    transition: all .5s ease;
+
+}
+
+.card:hover {
+    opacity: 1;
+    transform: scale(0.9);
+}
+
+.card h2 {
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+button {
+    background-color: #206f77;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all .5s ease;
+
+
+
+}
+
+button:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transform: scale(0.9);
+    transform: translate (5px, 12px);
+
+}
