@@ -23,13 +23,6 @@ h1 {
 
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px;
-    
-}
 
 .card {
     background-color: #70b4b3;
@@ -73,3 +66,22 @@ button:hover {
     transform: translate (5px, 12px);
 
 }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    
+}
+@media (min-width: 768px){
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 20px;
+        
+    }
+
+}
+
+
