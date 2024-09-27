@@ -3,26 +3,22 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh; /* Cambiar a min-height para que funcione mejor en pantallas más pequeñas */
     background-image: url(https://images.pexels.com/photos/4709285/pexels-photo-4709285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
     background-repeat: no-repeat;
-    background-size:cover;
-    background-position:center;
-    
-   
+    background-size: cover;
+    background-position: center;
 }
 
 .container {
     text-align: center;
-
+    padding: 20px; /* Agregar padding para espacio en pantalla pequeña */
 }
 
 h1 {
     color: #ffffff;
     margin-bottom: 30px;
-
 }
-
 
 .card {
     background-color: #70b4b3;
@@ -32,12 +28,11 @@ h1 {
     box-shadow: 0 14px 6px rgba(70, 139, 140, 0.1);
     opacity: .5;
     transition: all .5s ease;
-
 }
 
 .card:hover {
     opacity: 1;
-    transform: scale(0.9);
+    transform: scale(1.05); /* Cambiar a un aumento más sutil */
 }
 
 .card h2 {
@@ -54,34 +49,29 @@ button {
     cursor: pointer;
     font-size: 1rem;
     transition: all .5s ease;
-
-
-
 }
 
 button:hover {
     background-color: #ffffff;
     color: #000000;
-    transform: scale(0.9);
-    transform: translate (5px, 12px);
-
+    transform: scale(1.1); /* Cambiar a un aumento más sutil */
 }
+
 .grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
     padding: 20px;
-    
 }
-@media (min-width: 768px){
+
+@media (min-width: 768px) {
     .grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-        padding: 20px;
-        
+        grid-template-columns: repeat(2, 1fr); /* Cambiar a 2 columnas en pantallas medianas */
     }
-
 }
 
-
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas grandes */
+    }
+}
