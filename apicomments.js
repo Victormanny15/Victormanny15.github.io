@@ -1,21 +1,11 @@
 const APIS_URL = 'https://jsonplaceholder.typicode.com/';
-const postTableBody = document.querySelector('#postTableBody');
 const commentList = document.querySelector('#commentList');
 
-// Cargar publicaciones
+// Cargar comentarios para las publicaciones
 fetch(`${APIS_URL}/posts`)
     .then(response => response.json())
     .then(posts => {
         posts.forEach(post => {
-            const row = document.createElement('tr');
-            row.innerHTML = `
-                <td>${post.id}</td>
-                <td>${post.title}</td>
-                <td>${post.body}</td>
-            `;
-            postTableBody.appendChild(row);
-
-            // Cargar comentarios para cada publicación
             fetch(`${APIS_URL}/posts/${post.id}/comments`)
                 .then(response => response.json())
                 .then(comments => {
@@ -28,5 +18,5 @@ fetch(`${APIS_URL}/posts`)
         });
     })
     .catch(error => {
-        console.error('Error en la solicitud de publicaciones:', error);
+        console.error('Error en la solicitud de comentarios:', error);
     });
