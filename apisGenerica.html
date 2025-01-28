@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APIS GENERICA</title>
+    <link rel="stylesheet" href="apisGenerica.css">
+</head>
+<body>
+
+    <h1>solicitudes get de una apis rest</h1>
+
+    <!--seccion de usuario-->
+    <div id="app"></div>
+    
+    <!--seccion de tabla de usuario-->
+    <div id="apptable"></div>
+    
+    <!--seccion de publicaciones de usuario-->
+    <div id="appposts">
+        <h2>Publicaciones</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Título</th>
+                    <th>Cuerpo</th>
+                </tr>
+            </thead>
+            <tbody id="postTableBody"></tbody>
+        </table>
+    </div>
+
+    <!--seccion de comentarios de publicaciones-->
+    <div id="appcomments">
+        <h2>Comentarios</h2>
+        <ol id="commentList"></ol>
+    </div>
+
+    <!--seccion de fotos de usuario-->
+    <div id="appphotos">
+        <h2>Fotos</h2>
+        <div id="photoContainer"></div>
+    </div>
+
+    <!--scripts extremos para obtener las apis-->
+    <script src="apiusers.js" type="module"></script>
+    <script src="apiuserstable.js" type="module"></script>
+    <script src="apiposts.js" type="module"></script>
+    <script src="apiphotos.js" type="module"></script>
+    <script src="apicomments.js" type="module"></script>
+
+
+</body>
+</html>
